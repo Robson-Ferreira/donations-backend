@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  postgresdb:
+    container_name: donations-database
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: ${DATABASE_USERNAME}
+      POSTGRES_USER: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports: 
+      - ${DATABASE_PORT}:5432

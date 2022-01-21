@@ -17,7 +17,6 @@ const formatData = (data) => {
         currency: "USD"
     });
     const percentAnonymous = (totalAnonymous * 100) / totalDonations;
-    console.log(percentAnonymous);
     return { totalDonations, totalValueDonations, percentAnonymous };
 }
 

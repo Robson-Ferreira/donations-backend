@@ -17,7 +17,7 @@ export default {
     port: process.env.APP_PORT || 80,
   },
   sendGrid: {
-    token: process.env.SENDGRID_API_KEY,
+    token: process.env.SENDGRID_API_TOKEN,
     sender: process.env.SENDGRID_EMAIL_SENDER,
     receiver: process.env.SENDGRID_EMAIL_RECEIVER,
   },

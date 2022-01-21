@@ -11,57 +11,52 @@
 - [Yup](https://github.com/jquense/yup)
 - [Jest](https://jestjs.io/pt-BR/)
 
-## Instalação
+## Installation
 
-> Antes de iniciar a instação das dependências do projeto é necessário realizar instalação do Node.js versão LTS em sua máquina, caso não tenha em -> https://nodejs.org/en/. Após instalar, seguir os passos abaixo para instalação do projeto.
+> Before starting the installation of the project's dependencies, it is necessary to install the Node.js LTS version on your machine, if you don't have it at -> https://nodejs.org/en/. After installing, follow the steps below to install the project.
 
-> Antes de iniciar a instação das dependências do projeto é necessário realizar instalação do Docker-compose em sua máquina, caso não tenha em -> https://docs.docker.com/compose/install/. Após instalar, seguir os passos abaixo para instalação do projeto.
+> Before starting the installation of the project's dependencies, it is necessary to install Docker-compose on your machine, if you don't have it at -> https://docs.docker.com/compose/install/. After installing, follow the steps below to install the project.
 
 ```sh
-$ npm install || $ yarn install
+$ npm install --save || $ yarn install
 ```
-Para realizar a instalação das dependências do projeto é necessário rodar o comando `npm install` ou `yarn install`.
-Caso não tenha yarn você pode instalá-lo globalmente utilizando `npm install --global yarn`.
+To install the project's dependencies it is necessary to run the command `npm install --save` or `yarn install`.
+If you don't have yarn you can install it globally using `npm install --global yarn`.
 
 ## Container
 ```sh
 $ docker-compose up || $ docker-compose up -d
 ```
-Após realizar a instalação é necessário inicializar o `Docker Compose` que é responsável pelo `Banco de Dados PostgresSQL`
-com o comando `docker-compose up` ou `docker-compose up -d` flag `-f` para iniciar em background.
+After performing the installation, it is necessary to initialize `Docker Compose` which is responsible for the `PostgresSQL Database`
+with the command `docker-compose up` or `docker-compose up -d` flag `-f` to start in background.
 
 ## Migrations
 ```sh
 $ yarn sequelize-cli db:migrate
 ```
-Logo após é necessário subir as nossas migrations (tabelas) em nosso banco de dados utilizando o comando acima.
+Soon after it is necessary to upload our migrations (tables) in our database using the command above.
 
-## Inicializar o Servidor
+## Start the Server
 ```sh
 $ yarn dev
 ```
-Depois de realizar todos os passos acima, nosso servidor está pronto para ser inicializado através do comando  `yarn dev`.
+After performing all the steps above, our server is ready to be started using the `yarn dev` command.
 
-## Cobertura de Testes
-```sh
-$ yarn test
-```
-Para rodar todos os testes da aplicação é necessário rodar o comando `yarn test`.
 
-## Exemplo de chamada a Endpoints
+## Example of calling endpoints
 
 ```sh
 endpoint: http://localhost:4000:/api/v1/donor
 method: GET
 query: current: number | pageSize: number | name: string | hasHeader = boolean | delimiter: string
 ```
-> Ao realizar uma chamada para esse endpoint ele irá buscar os registros no banco de dados.
+> When making a call to this endpoint it will fetch the records in the database.
 
 ```sh
 endpoint: http://localhost:4000:/api/v1/donor
 method: POST
 enctype: multipart/form-data
 ```
-> Esse endpoint é responsável por receber os dados Donation em arquivo .csv e salvar no banco de dados.
+> This endpoint is responsible for receiving the Donation data in a .csv file and saving it to the database.
 
 
